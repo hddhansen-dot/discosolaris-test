@@ -34,33 +34,33 @@ export const Hero = () => {
       <Particles count={50} />
 
       {/* Top nav */}
-      <nav className="relative z-20 container flex items-center justify-between pt-8">
+      <nav className="relative z-20 container flex items-center justify-between pt-6 sm:pt-8">
         <div className="flex items-center gap-2">
           <span className="h-3 w-3 rounded-full bg-primary shadow-glow-pink animate-pulse-glow" />
-          <span className="font-ui font-bold text-sm tracking-[0.3em] uppercase">Solaris</span>
+          <span className="font-ui font-bold text-xs sm:text-sm tracking-[0.3em] uppercase">Solaris</span>
         </div>
-        <div className="hidden md:flex items-center gap-8 font-ui text-xs uppercase tracking-[0.2em]">
+        <div className="hidden md:flex items-center gap-6 lg:gap-8 font-ui text-xs uppercase tracking-[0.2em]">
           <a href="#roadmap" className="text-foreground/70 hover:text-primary transition-colors">Starmap</a>
           <a href="#features" className="text-foreground/70 hover:text-primary transition-colors">Systems</a>
           <a href="#leaderboard" className="text-foreground/70 hover:text-primary transition-colors">Ranks</a>
           <a href="#enter" className="text-foreground/70 hover:text-primary transition-colors">Enter</a>
         </div>
-        <span className="font-ui text-[10px] tracking-[0.3em] text-accent uppercase hidden md:block">
+        <span className="font-ui text-[10px] tracking-[0.3em] text-accent uppercase hidden sm:block">
           Cycle 2089 · Live
         </span>
       </nav>
 
       {/* Hero content */}
-      <div className="relative z-10 container flex flex-col items-center justify-center text-center pt-32 pb-40 min-h-[calc(100vh-100px)]">
-        <div className="inline-flex items-center gap-2 glass-panel rounded-full px-4 py-1.5 mb-8 animate-rise">
-          <span className="h-2 w-2 rounded-full bg-accent animate-pulse-yellow" />
-          <span className="font-ui text-[10px] tracking-[0.3em] uppercase text-foreground/80">
+      <div className="relative z-10 container flex flex-col items-center justify-center text-center pt-20 sm:pt-28 pb-32 sm:pb-40 min-h-[calc(100vh-80px)]">
+        <div className="inline-flex items-center gap-2 glass-panel rounded-full px-3 sm:px-4 py-1.5 mb-6 sm:mb-8 animate-rise max-w-full">
+          <span className="h-2 w-2 rounded-full bg-accent animate-pulse-yellow shrink-0" />
+          <span className="font-ui text-[9px] sm:text-[10px] tracking-[0.25em] sm:tracking-[0.3em] uppercase text-foreground/80 truncate">
             Transmission · Sector Solaris
           </span>
         </div>
 
         <h1
-          className="font-display text-[clamp(5rem,18vw,15rem)] leading-[0.9] text-glow-pink animate-rise"
+          className="font-display text-[clamp(4.5rem,16vw,15rem)] leading-[0.9] text-glow-pink animate-rise"
           style={{ animationDelay: "0.1s" }}
         >
           Disco
@@ -69,13 +69,13 @@ export const Hero = () => {
         </h1>
 
         <p
-          className="font-ui text-base md:text-lg text-foreground/85 max-w-2xl mt-6 mb-10 tracking-wide animate-rise"
+          className="font-ui text-sm sm:text-base md:text-lg text-foreground/85 max-w-2xl mt-5 sm:mt-6 mb-8 sm:mb-10 tracking-wide animate-rise px-2"
           style={{ animationDelay: "0.25s" }}
         >
           Chart your path. Shape your identity. Explore the unknown.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 animate-rise" style={{ animationDelay: "0.4s" }}>
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto items-stretch sm:items-center animate-rise" style={{ animationDelay: "0.4s" }}>
           <NeonButton size="lg" onClick={() => document.getElementById("roadmap")?.scrollIntoView({ behavior: "smooth" })}>
             Enter the Starmap <ArrowRight className="h-4 w-4" />
           </NeonButton>
@@ -85,7 +85,7 @@ export const Hero = () => {
         </div>
 
         {/* Floating stats */}
-        <div className="absolute bottom-12 left-0 right-0 hidden md:flex justify-between container">
+        <div className="absolute bottom-8 lg:bottom-12 left-0 right-0 hidden lg:flex justify-between container">
           <Stat label="Explorers" value="48,201" />
           <Stat label="Sectors Charted" value="1,209" />
           <Stat label="Cycle" value="2089.4" />
@@ -98,6 +98,6 @@ export const Hero = () => {
 const Stat = ({ label, value }: { label: string; value: string }) => (
   <div className="text-left">
     <div className="font-ui text-[10px] tracking-[0.3em] uppercase text-primary/70">{label}</div>
-    <div className="font-display text-3xl text-glow-yellow">{value}</div>
+    <div className="font-display text-2xl lg:text-3xl text-glow-yellow">{value}</div>
   </div>
 );
