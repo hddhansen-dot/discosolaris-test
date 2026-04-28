@@ -33,15 +33,15 @@ export const Roadmap = () => {
   const [active, setActive] = useState<Node | null>(null);
 
   return (
-    <section id="roadmap" className="relative py-32 px-6 overflow-hidden">
+    <section id="roadmap" className="relative py-20 sm:py-28 lg:py-32 px-4 sm:px-6 overflow-hidden">
       <div className="absolute inset-0 grid-bg opacity-40" />
       <div className="absolute inset-0 bg-sunset opacity-50" />
 
       <div className="container relative z-10">
-        <div className="text-center mb-20 animate-rise">
-          <p className="font-ui text-xs tracking-[0.5em] text-primary mb-4 uppercase">Live Starmap</p>
-          <h2 className="font-display text-6xl md:text-8xl text-glow-pink mb-4">The Journey</h2>
-          <p className="text-muted-foreground max-w-xl mx-auto">
+        <div className="text-center mb-12 sm:mb-16 lg:mb-20 animate-rise">
+          <p className="font-ui text-[10px] sm:text-xs tracking-[0.4em] sm:tracking-[0.5em] text-primary mb-3 sm:mb-4 uppercase">Live Starmap</p>
+          <h2 className="font-display text-5xl sm:text-6xl md:text-8xl text-glow-pink mb-3 sm:mb-4">The Journey</h2>
+          <p className="text-sm sm:text-base text-muted-foreground max-w-xl mx-auto px-2">
             Glowing nodes mark conquered worlds. Dimmed signals whisper of what's still to come.
           </p>
         </div>
